@@ -72,7 +72,7 @@ The **functional MVP (V_0)** has been built and is available in a separate repos
 
 | Document | Purpose | Key Insights |
 |----------|---------|--------------|
-| **Problem Framing** | Strategic analysis | 6 opportunities identified, market sized at $12B TAM |
+| **Problem Framing** | Strategic analysis | 6 opportunities identified |
 | **MVP Selection** | Decision rationale | Variance Commentary scored 88/100, clear winner |
 | **MVP Design** | Product specification | Complete V_0/V_1/V_2 roadmap with technical architecture |
 | **Working MVP** | Implementation | Functional app in separate repo (see link above) |
