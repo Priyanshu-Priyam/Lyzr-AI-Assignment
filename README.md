@@ -1,4 +1,4 @@
-# Lyzr AI Job Assignment: CFO Office AI Agent Analysis & MVP Design
+# Lyzr AI Assignment: CFO Office AI Agent Analysis & MVP Design
 
 This repository contains the strategic analysis, problem framing, and MVP design documentation for the **CFO Office AI Agent** project, completed as part of the Lyzr AI job assignment.
 
