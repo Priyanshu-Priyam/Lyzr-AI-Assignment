@@ -1,5 +1,5 @@
 # Problem Framing: The Office of the CFO
-### First-Principles Analysis for AI Agent Opportunities
+### Analysis for AI Agent Opportunities
 
 > **Thesis:** The CFO office is an information integrity engine where ~80% of human
 > labor is spent recording and verifying data — not interpreting it. AI agents unlock
@@ -7,15 +7,15 @@
 
 ---
 
-## 1. What IS the CFO Office? (First Principles)
+## 1. What IS the CFO Office? 
 
-Strip away org charts and job titles. The CFO office performs exactly **three functions**:
+The CFO office performs exactly **three functions**:
 
 | Function | What It Does | % of Labor | AI Leverage |
 |---|---|---|---|
-| **A. Record Reality** | Capture every economic event as structured entries (double-entry bookkeeping) | ~30% | Medium — ERP handles most; edge cases remain |
-| **B. Verify Reality** | Ensure recorded data matches actual reality across systems | ~50% | **Very High** — repetitive, rule-based, error-prone |
-| **C. Interpret Reality** | Transform verified data into narratives, forecasts, decisions | ~20% | **High** — LLMs excel at data-to-narrative |
+| **A. Record Financial Reality** | Capture every economic event as structured entries (double-entry bookkeeping) | ~30% | Medium — ERP handles most; edge cases remain |
+| **B. Verify Financial Reality** | Ensure recorded data matches actual reality across systems | ~50% | **Very High** — repetitive, rule-based, error-prone |
+| **C. Interpret Financial Reality** | Transform verified data into narratives, forecasts, decisions | ~20% | **High** — LLMs excel at data-to-narrative |
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -30,7 +30,7 @@ Strip away org charts and job titles. The CFO office performs exactly **three fu
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-**The fundamental misallocation:** The highest-value activity (interpretation) gets the least time. AI agents should flip this by absorbing the recording and verification labor.
+**The fundamental misallocation:** The highest-value activity (interpretation) gets the least time. 
 
 ---
 
@@ -38,11 +38,11 @@ Strip away org charts and job titles. The CFO office performs exactly **three fu
 
 These are invariant across all companies, industries, and geographies:
 
-| Law | Analogy | Implication |
-|---|---|---|
-| **Conservation of Information** — Every economic event must be captured and balanced | Thermodynamics: energy can't be created or destroyed | Creates massive recording overhead; double-entry is the enforcement mechanism |
-| **Entropy of Financial Data** — Systems drift apart over time without active maintenance | Thermodynamics: entropy always increases | Reconciliation is entropy-fighting labor — Sisyphean, every period, forever |
-| **Latency of Insight** — Gap always exists between event occurrence and organizational understanding | Speed of light: information has propagation delay | Drives the entire "close faster" movement; monthly close is the dominant battleground |
+| Law | Implication |
+|---|---|
+| **Conservation of Information** — Every economic event must be captured and balanced | Creates massive recording overhead; double-entry is the enforcement mechanism |
+| **Entropy of Financial Data** — Systems drift apart over time without active maintenance | Reconciliation |
+| **Latency of Insight** — Gap always exists between event occurrence and organizational understanding | Drives the entire "close faster" movement; monthly close is the dominant battleground |
 
 ---
 
@@ -215,9 +215,9 @@ Macquarie (Fortune 500 financial institution) has deployed AI agents in finance.
 
 ---
 
-## 8. The Structural Isomorphism: Maker-Checker ≡ Git PR
+## 8. Structural Isomorphism: Maker-Checker ≡ Git PR
 
-This is the deepest connection in our analysis:
+This is the deepest connection in analysis:
 
 ```
 FINANCE CONTROLS          GIT WORKFLOW              IMPLICATION

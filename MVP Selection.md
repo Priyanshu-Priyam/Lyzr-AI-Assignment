@@ -1,7 +1,7 @@
 # MVP Selection: Strategic Evaluation & Rationale
-### From Problem Space to Product Decision
+### Problem Space -> Product Decision
 
-> **Decision:** Build a **Variance Commentary Agent** — a digital co-worker that transforms
+> Build a **Variance Commentary Agent** — a digital co-worker that transforms
 > two spreadsheets into draft management commentary in minutes. It sits at the intersection
 > of maximum pain, maximum LLM fit, minimum integration complexity, and maximum strategic
 > positioning for Lyzr.
@@ -86,34 +86,7 @@ Account Recon        ███████████████████�
 
 ---
 
-## 3. Why Variance Commentary Is LLM-Native
-
-The core task is: **structured data → narrative text**. This is what LLMs were born to do.
-
-```
-INPUT:                                    OUTPUT:
-┌─────────────────────────────┐          ┌─────────────────────────────────────┐
-│ Account: Revenue - APAC     │          │ APAC Revenue increased $1.2M (12%) │
-│ Current:  $11,200,000       │    →     │ vs prior period, driven primarily   │
-│ Prior:    $10,000,000       │   LLM    │ by the new distribution agreement   │
-│ Budget:   $10,800,000       │    →     │ signed in Q3. Performance exceeded  │
-│ Variance: +$1,200,000 (12%)│          │ budget by $400K (4%), reflecting    │
-│ Context:  Q3 deal signed    │          │ stronger-than-expected adoption     │
-└─────────────────────────────┘          │ rates in the Southeast Asia region. │
-                                         └─────────────────────────────────────┘
-```
-
-| LLM Capability | How It's Used |
-|---|---|
-| Data-to-text generation | Core task: turn numbers into sentences |
-| Pattern recognition | "This account always spikes in Q4" — learns from historical commentary |
-| Reasoning | Decompose variance into drivers (volume/price/mix/one-off) |
-| Context integration | Incorporate business context from knowledge base |
-| Style adaptation | Match company's existing commentary tone and format |
-
----
-
-## 4. Why Lyzr Product Fit Is Perfect
+## 3. Why Lyzr Product Fit Is Perfect
 
 ### Architect Capability Mapping
 
@@ -168,13 +141,7 @@ ERP → [Human exports to Excel, 10 sec] → Upload to Agent → [Agent, 2 min] 
                                     already exports
 ```
 
-| Integration Approach | Time to Build | Eng. Cost | Customer-Specific Config | Scalability |
-|---|---|---|---|---|
-| **File upload (CSV/Excel)** ✓ | 2 weeks | Minimal | None | High |
-| API connector | 3–6 months | Moderate | Per-ERP | Medium |
-| Deep ERP embed | 12+ months | Heavy | Per-customer | Low |
 
-**The human already exports to Excel.** We don't need to replace that step — we just need to process the output. This is the 80/20: the 10-second export stays manual; the 4-hour analysis becomes 2 minutes.
 
 ---
 
@@ -194,18 +161,10 @@ ERP → [Human exports to Excel, 10 sec] → Upload to Agent → [Agent, 2 min] 
 | **Annual spend per company** | **$30K–$1.5M** | Calculated |
 | **Total addressable market** | **$1.5B–$7.5B** | 50K companies × avg spend |
 
-### Willingness to Pay Signal
-
-| Evidence | What It Tells Us |
-|---|---|
-| BlackLine pricing: $200K–$1M+ ACV | Finance teams pay real money for close automation |
-| Macquarie built internal platform | So valuable they built it themselves |
-| 47% of finance leaders cite manual data assembly as #1 bottleneck | Confirmed pain |
-| No existing solution for commentary specifically | Unaddressed = underserved |
 
 ---
 
-## 7. The Trust Ladder: Variance Commentary as Entry Point
+## 7. Variance Commentary as Entry Point
 
 Variance commentary is the **minimum risk entry point** that leads to full CFO office adoption:
 
@@ -230,53 +189,6 @@ Level 4        Multi-Agent Co-Worker      HIGHEST     ← 12+ months
                 across CFO office)        ownership)  
 ```
 
-**Why commentary first:** If the agent writes a bad commentary draft, the supervisor catches it and edits it. No harm done. If the agent posts a wrong journal entry, the GL is wrong. Commentary is the safest possible entry point with the highest visibility — it goes to the CFO.
+
 
 ---
-
-## 8. Strategic Positioning for Lyzr
-
-### Why This Is Uniquely Lyzr's Opportunity
-
-| Competitive Requirement | Why Lyzr Wins | Why Others Can't |
-|---|---|---|
-| Agent + UI generation | Architect generates full app from prompt | LangChain = no UI; BlackLine = no AI reasoning |
-| Governance / audit trail | GitClaw provides SOX-grade audit infra | OpenAI/Anthropic = no governance layer |
-| Maker-checker enforcement | GitClaw Pattern 14 (DUTIES.md) | Generic AI tools have no SOD concept |
-| VPC/on-prem deployment | Lyzr's core architecture | ChatGPT/Claude = SaaS only |
-| Hallucination prevention | Hallucination Manager verifies numbers | No competitor has purpose-built financial accuracy checks |
-| Non-technical users | Architect's Guided Mode | LangChain/CrewAI require engineering |
-
-### The "Digital Co-Worker Factory" Meta-Product
-
-Individual agents (Variance Commentary, Reconciliation, etc.) are instances. **Architect is the factory.** The strategic play:
-
-```
-TODAY:           Lyzr ships a Variance Commentary Agent template
-                                    ↓
-NEXT QUARTER:    Finance teams create more agents using Architect
-                 (Reconciliation Agent, Journal Agent, etc.)
-                                    ↓
-NEXT YEAR:       Each customer has a "digital co-worker team" 
-                 managed through Lyzr's control plane
-                                    ↓
-MOAT:            Agent memory, version history, reputation data, 
-                 and institutional knowledge locked into GitClaw
-                 → switching cost becomes real
-```
-
----
-
-## 9. Decision Summary
-
-| Dimension | Variance Commentary | Next Best (Reconciliation) |
-|---|---|---|
-| Market gap | **No existing solution** | BlackLine, Trintech exist |
-| LLM fit | **Perfect** (data → text) | Moderate (matching is algorithmic) |
-| Integration needed | **None** (file upload) | Moderate (bank feeds) |
-| Time to MVP | **2–3 weeks** | 6–8 weeks |
-| Risk to user | **Zero** (review before use) | Low–medium (matching errors) |
-| Visibility | **Very high** (goes to CFO) | Moderate (back-office) |
-| Demo impact | **Instant** (spreadsheet → narrative) | Good but less dramatic |
-
-**Variance Commentary is the clear winner.** It is the fastest path to proving Lyzr's value proposition in the CFO office — and the safest entry point for building the trust needed to expand.

@@ -303,21 +303,6 @@ flowchart TD
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### Component Breakdown
-
-| Component | Technology | Responsibility | Build Effort |
-|---|---|---|---|
-| **Frontend** | Next.js (Architect-generated) | Upload, review, approve, audit trail | Auto-generated |
-| **File Parser** | Python (pandas + openpyxl) | Parse CSV/Excel, detect schema, normalize | 2–3 days |
-| **Variance Engine** | Python (deterministic logic) | Calculate variances, apply thresholds, rank | 1–2 days |
-| **Commentary Generator** | LLM (GPT-4 via Lyzr gateway) | Generate narratives from data + context | 3–5 days |
-| **Quality Gate** | Python + LLM (Hallucination Mgr) | Verify accuracy, flag low-confidence items | 2–3 days |
-| **Knowledge Base** | Lyzr RAG pipeline | Store prior commentary, business context | 2–3 days |
-| **Audit Logger** | GitClaw append-only log | Record every action with crypto signatures | 1–2 days |
-| **Notification Service** | Gmail/Slack integration | Alert supervisor, distribute final pack | 1 day |
-| **Export Engine** | Python (ReportLab / openpyxl) | Generate formatted PDF/Excel output | 1–2 days |
-
-**Total estimated build: 2–3 weeks with lean team.**
 
 ### Data Flow
 
@@ -478,70 +463,6 @@ You explain the "why" behind numbers, not just restate them.
 
 ---
 
-## 9. Success Metrics
-
-### MVP Launch (Month 1)
-
-| Metric | Target | Measurement |
-|---|---|---|
-| Time to first useful output | < 5 min from upload | Timestamp logs |
-| Commentary accuracy (numbers) | 100% | Automated quality gate |
-| Commentary acceptance rate (approved without edit) | > 60% | UI tracking |
-| Time savings vs. manual | > 70% | User survey + time comparison |
-| User NPS | > 40 | Post-close survey |
-
-### Growth (Month 3–6)
-
-| Metric | Target | Signal |
-|---|---|---|
-| Repeat usage | > 90% month-over-month | User returns every close |
-| Edit rate declining | < 30% by month 3 | Agent learning from corrections |
-| Entities covered | 3+ per customer | Expansion to additional entities |
-| New agent creation | Customer creates 2nd agent (e.g., recon) | Trust ladder progression |
-
-### Enterprise (Month 6–12)
-
-| Metric | Target | Signal |
-|---|---|---|
-| Close cycle reduction | 1+ day saved | Executive-level ROI |
-| Audit trail usage | External auditors reference it | Compliance validation |
-| Multi-agent adoption | 3+ agents per customer | Platform stickiness |
-| Agent memory depth | 6+ periods of context | Compounding quality improvement |
-
----
-
-## 10. Implementation Roadmap
-
-```
-WEEK 1-2: CORE ENGINE
-├── Day 1-3:   File parser (CSV/Excel → structured data)
-├── Day 4-5:   Variance calculation engine + materiality filter
-├── Day 6-8:   Commentary generation pipeline (LLM integration)
-├── Day 9-10:  Quality gate (numerical accuracy checks)
-└── Milestone: Upload 2 files → get commentary output (CLI)
-
-WEEK 2-3: USER EXPERIENCE  
-├── Day 11-13: Architect-generated review UI
-├── Day 14-15: Edit/approve/flag workflow
-├── Day 16-17: Export (PDF/Excel formatted output)
-├── Day 18:    Email distribution integration
-└── Milestone: End-to-end flow working in browser
-
-WEEK 3-4: GOVERNANCE & POLISH
-├── Day 19-20: GitClaw audit trail integration
-├── Day 21-22: Agent memory (store approved commentary for next period)
-├── Day 23-24: Context notes feature (user provides business context)
-├── Day 25:    Quality scoring display in review UI
-└── Milestone: Production-ready MVP with audit trail
-
-WEEK 4+: VALIDATION
-├── Internal dogfooding with sample data
-├── Demo preparation (before/after narrative)
-├── Documentation and onboarding flow
-└── Milestone: Ready for customer pilot
-```
-
----
 
 ## 11. Risk Mitigation
 
@@ -554,18 +475,3 @@ WEEK 4+: VALIDATION
 | **Cold start quality** (no historical context in month 1) | Low | Certain | Set expectations: "Commentary improves each period as I learn your business." Show quality score trending up. |
 
 ---
-
-## 12. Why This MVP Proves Lyzr's Thesis
-
-| Lyzr Claim | How This MVP Demonstrates It |
-|---|---|
-| "Prompt to production app" | Finance manager describes need → working agent + UI in minutes |
-| "Enterprise-grade with governance" | SOX-compliant audit trail, maker-checker, VPC deployment |
-| "Not just tools — outcomes" | Agent doesn't just answer questions — it PRODUCES the deliverable |
-| "Palantir-style co-build" | Agent has identity, specialty, memory — it's a co-worker, not a tool |
-| "20,000 simulations before deploy" | Quality gate runs numerical verification on every single output |
-| "The Third Way" | Not raw framework (LangChain) or locked SaaS (Copilot) — configurable agent, your VPC |
-
-> **The variance commentary agent is not just a feature — it's a proof of concept
-> for the entire "AI workforce for the CFO office" vision.** Start with one co-worker.
-> Build trust. Expand the team. That's the Lyzr playbook.
